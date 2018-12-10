@@ -1,25 +1,20 @@
-
 /**
- * 2)	Find out if the given number is an Armstrong number.
-	Logic: - if 153 is the Supplied value, then  13 + 53 + 33 = 1+125+27 = 153 
-
-	This is the same as supplied value hence it is an Armstrong number.
-
-
- * 
+ * 3)	Find out all the Armstrong numbers falling in the range of 100-999
  * @author shuraut
  *
  */
-public class ArmstrongNumber {
+public class ListAllArmstrongNumbers {
 
 	public static void main(String[] args) {
-		if(isArmstrongNumber(153)){
-			System.out.println("This is Armstrong Number");
-		}else{
-			System.out.println("This is not Armstrong Number");
-		}
-	}
 
+		for(int i=100;i<=999;i++){
+			if(isArmstrongNumber(i)){
+				System.out.println(i);
+			}
+		}
+		
+	}
+	
 	/**
 	 * This method checks Armstrong Number. 
 	 * If number is Armstrong Number then it returns true
@@ -32,8 +27,8 @@ public class ArmstrongNumber {
 		
 		int temp;
 		int a;
-		temp=i;
-		int sum=0;
+		temp=i; //original number is saved in temporary variable. 
+		int sum=0; // 
 		while(i>0){
 			a=i%10;
 			i=i/10;
@@ -45,6 +40,6 @@ public class ArmstrongNumber {
 		}
 			return false;
 	}
-	
+
 
 }
