@@ -25,19 +25,20 @@ import java.util.Scanner;
  */
 public class RemoveSpaces {
 
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
 
-		String str=sc.nextLine();
+	public String identifyAndRemoveSpacesInString(String input, String wordToBeDeleted, int wordPositionInSentence) {
+
+		StringBuffer sb=new StringBuffer();
+		String[] splittedString=input.split("\\s+");
 		
-		System.out.println(str);
-		
-		for(String s:str.split("\\s")){
-			System.out.print(s+" ");
+		for(int i=0;i<splittedString.length;i++){
+			if(!((i+1)==wordPositionInSentence && wordToBeDeleted.equals(splittedString[i]))){
+				sb.append(splittedString[i]+" ");
+			}
 		}
-		System.out.println(str.replaceAll("\\s", " "));
+
 		
-		
+		return sb.toString();
 	}
 
 }

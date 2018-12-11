@@ -22,9 +22,8 @@ public class RemoveDuplicateCharacters {
 		Scanner sc=new Scanner(System.in);
 		
 		String originalString=sc.nextLine();
-		
-//		CheckDuplicates c=new CheckDuplicates(originalString.charAt(0), 1);
-		
+
+
 		String sss;
 		for(int i=0;i<originalString.length();i++){
 		}
@@ -49,7 +48,6 @@ class CheckDuplicates{
 	
 	
 	public CheckDuplicates(char character, int count) {
-		
 		this.character = character;
 		this.count = count;
 	}

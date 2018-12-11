@@ -15,27 +15,42 @@ package basicpart2;
  */
 public class FindMissingElementInArray {
 
-	public static void main(String[] args) {
-
-		int arr[] = { 9, 6, 4, 2, 3, 5, 7, 0, 1 };
-//		int arr[] = { 3,0,1};
-		for (int i = 0; i < arr.length; i++) {
-
-			for (int j = 0; j < arr.length - 1; j++) {
-				if (arr[j] > arr[j + 1]) {
-					int temp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = temp;
+	
+	/**
+	 * This method takes integer array 
+	 * and returns the missing integer element in the array
+	 * 
+	 * First array is sorted and then it finds missing element using for loop.  
+	 * 
+	 * @param numbers is a integer array
+	 * @return
+	 */
+	public int getMissingElement(int[] numbers) {
+		
+		/**
+		 * here two nested for loop sorts numbers array using bubble sort algorithm
+		 */
+		for (int i = 0; i < numbers.length; i++) { 
+			for (int j = 0; j < numbers.length - 1; j++) {
+				if (numbers[j] > numbers[j + 1]) {  //if first number is greater second then swapping is done using temp variable
+					int temp = numbers[j];
+					numbers[j] = numbers[j + 1];
+					numbers[j + 1] = temp;
 				}
 			}
 		}
 
-			for(int i=0;i<arr.length;i++){
-				if(arr[i]!=i){
-					System.out.println(i);
+		
+		/**
+		 * this for loop checks the missing element 
+		 */
+			for(int i=0;i<numbers.length;i++){
+				if(numbers[i]!=i){
+					return i;
 				}
 			}
-
+		
+		return numbers.length;
 	}
 
 }
