@@ -2,10 +2,8 @@ package basicpart2;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +33,9 @@ public class MissingElementInArrayTest {
 				{{0,3,1},{2}},
 				{{0,1,2,3,5,4,6,9,7},{8}},
 				{{0,1,3,5,6,2},{4}},
-				{{0,1,3,5,6,2,4},{7}}
+				{{0,1,3,5,6,2,4},{7}},
+				{{0,1,3,2,5},{4}},
+				{{2,0,1},{3}},
 		});
 	}
 

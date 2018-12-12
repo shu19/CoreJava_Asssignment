@@ -1,6 +1,6 @@
 package basicpart2;
 
-import java.util.Scanner;
+
 
 /**
  * Write a program to input a word from the user and remove the duplicate characters present in it.
@@ -17,51 +17,20 @@ import java.util.Scanner;
  */
 public class RemoveDuplicateCharacters {
 
-	public static void main(String[] args) {
 
-		Scanner sc=new Scanner(System.in);
-		
-		String originalString=sc.nextLine();
-
-
-		String sss;
-		for(int i=0;i<originalString.length();i++){
-		}
-
-		System.out.println(removeDuplicates(originalString));
-	}
-	
-	public static String removeDuplicates(String input){
-	    String result = "";
-	    for (int i = 0; i < input.length(); i++) {
-	        if(!result.contains(String.valueOf(input.charAt(i)))) {
-	            result += String.valueOf(input.charAt(i));
+	/**
+	 * @param input  : this is input String which contains duplicate characters
+	 * 
+	 * @return uniqueCharactersString : this is String without duplicate characters in it.
+	 */
+	public String removeDuplicates(String input){
+		String uniqueCharactersString = new String();  //String is initialized
+	    for (int index = 0; index< input.length(); index++) {
+	        if(!uniqueCharactersString.contains(String.valueOf(input.charAt(index)))) { // checks for character in string
+	        	uniqueCharactersString+= String.valueOf(input.charAt(index));  // if character is not present in string then only it appends the string
 	        }
 	    }
-	    return result;
+	    return uniqueCharactersString;
 	}
 
 }
-class CheckDuplicates{
-	private char character;
-	private int count;
-	
-	
-	public CheckDuplicates(char character, int count) {
-		this.character = character;
-		this.count = count;
-	}
-	public char getCharacter() {
-		return character;
-	}
-	public void setCharacter(char character) {
-		this.character = character;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}	
-}
-

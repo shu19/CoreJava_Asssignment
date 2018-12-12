@@ -18,6 +18,7 @@ public class NamesArray {
 				System.out.println(i);
 			}
 		}
+		sc.close();
 		
 		
 	}

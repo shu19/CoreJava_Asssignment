@@ -33,7 +33,7 @@ public class Palindrome {
 
 		System.out.println(isPalindrome(originalNumber));
 		
-
+		sc.close();
 	}
 
 	private static boolean isPalindrome(int originalNumber) {

@@ -7,11 +7,12 @@ import org.junit.Test;
 
 public class CheckArrayForPalindromeTest {
 	CheckArrayForPalindrome checkArrayForPalindrome;
+
 	@Before
 	public void setUp(){
 		checkArrayForPalindrome=new CheckArrayForPalindrome();
 	}
-	
+
 	@Test
 	public void test() {
 		String[] input={
@@ -28,8 +29,8 @@ public class CheckArrayForPalindromeTest {
 		};
 		String []actual=checkArrayForPalindrome.checkPalindromAndSortArrayInDescendingOrder(input);
 		String expected[]={"PPPOOOOPPP", "MAAM", "HIJKJIH", "ANMMNA", "ACCCA", "ABBA", "ABA"};
-		assertEquals(expected, actual);
-		
+		assertArrayEquals(expected, actual);
+
 	}
 
 }

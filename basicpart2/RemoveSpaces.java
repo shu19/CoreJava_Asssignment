@@ -1,6 +1,6 @@
 package basicpart2;
 
-import java.util.Scanner;
+
 
 /**
  * Write a program to accept a sentence from the user and perform the following task:

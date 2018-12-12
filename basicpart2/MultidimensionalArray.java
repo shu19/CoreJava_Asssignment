@@ -1,6 +1,5 @@
 package basicpart2;
 
-import java.util.Arrays;
 
 /**
  * Write a program to find if a particular element is present in a multi-dimensional array.
@@ -11,22 +10,20 @@ import java.util.Arrays;
 
 public class MultidimensionalArray {
 
-	public static void main(String[] args) {
-		
-		int numbers[][]={
-				{5,8,3},
-				{1,9,6}
-		};
-		
-		searchElement(9,numbers);
 
+	public boolean searchElement(int numberToBeSearch, int[][] numbers) {
 
-	}
-	
-	private static void searchElement(int i, int[][] numbers) {
-		for(int j=0;j<numbers.length;j++){
+		for(int row=0;row<numbers.length;row++){
+			
+			for(int column=0;column<numbers[0].length;column++){
+				
+				if(numberToBeSearch==numbers[row][column]){
+					return true;
+				}
+			}
 			
 		}
+		return false;
 	}
 
 }
