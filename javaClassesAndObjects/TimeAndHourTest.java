@@ -17,9 +17,9 @@ public class TimeAndHourTest {
 		
 		TimeAndHour t3=new TimeAndHour();
 		
-		System.out.println("Addition of hours is "+t3.sum(t1, t2).getHours()+" hours, "+t3.sum(t1, t2).getMinutes()+" minutes");
-		
-		
+		String expected="Addition of hours is 9 hours, 30 minutes";
+		String actual="Addition of hours is "+t3.sum(t1, t2).getHours()+" hours, "+t3.sum(t1, t2).getMinutes()+" minutes";
+		assertEquals(expected, actual);
 	}
 
 }

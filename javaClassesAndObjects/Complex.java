@@ -20,7 +20,15 @@ public class Complex {
 	private float real;
 	private float imaginary;
 	
+	public Complex() {
+		
+	}
 	
+	public Complex(float real, float imaginary) {
+		this.real = real;
+		this.imaginary = imaginary;
+	}
+
 	public void set(float real,float imaginary){
 		this.real=real;
 		this.imaginary=imaginary;
@@ -29,7 +37,9 @@ public class Complex {
 	public void display(){
 		System.out.println("complex number : "+real+" + "+imaginary+" i");
 	}
-	
+	public String show(){
+		return "complex number : "+real+" + "+imaginary+" i";
+	}
 	public Complex sum(Complex number1,Complex number2){
 		
 		Complex complex=new Complex();

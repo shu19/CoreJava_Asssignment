@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DateTest {
+public class TriangleTestIsScalene {
 
 	@Before
 	public void setUp() throws Exception {
@@ -13,10 +13,8 @@ public class DateTest {
 
 	@Test
 	public void test() {
-		Date d1=new Date(10,12,2017);
-		Date d2=new Date(10,12,2016);
-		assertEquals(true, d2.isSmaller(d1));
-
+		Triangle t=new Triangle(5, 4, 3);
+		assertEquals(true, t.isScalene());
 	}
 
 }
