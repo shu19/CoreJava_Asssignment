@@ -74,11 +74,11 @@ public class Person {
 	public Person() {
 		// TODO Auto-generated constructor stub
 	}
-	public void display()// method to display the details of a person.
+	public String display()// method to display the details of a person.
 	{
-		System.out.println("Name : "+name+"\n"
+		return "Name : "+name+"\n"
 						 + "Date Of Birth : "+dob+"\n"
-						 + "Age : "+getAge(dob).getYears()+" Years, "+getAge(dob).getMonths()+" Months,"+ getAge(dob).getDays() +" Days\n");
+						 + "Age : "+getAge(dob).getYears()+" Years, "+getAge(dob).getMonths()+" Months,"+ getAge(dob).getDays() +" Days\n";
 		
 	}
 	public void olderOne(Person p1,Person p2) //method to identify the older of the two persons.

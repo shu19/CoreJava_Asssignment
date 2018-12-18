@@ -9,7 +9,8 @@ package javaClassesAndObjects;
 	 change channel
 	 turn it on and off.
 	     
-	Design this class, create an instance, turn on, increase and decrease the volume, change channels..get information about state, volume and channel..finally turn it off.
+	Design this class, create an instance, turn on, increase and decrease the volume, 
+	change channels..get information about state, volume and channel..finally turn it off.
 
  * @author shuraut
  *

@@ -26,7 +26,7 @@ package javaClassesAndObjects;
  *
  */
 
-public class Employee_Assignment {
+public class Employee {
 
 	private int id;
 	private String name;
@@ -57,7 +57,7 @@ public class Employee_Assignment {
 		this.monthlyBasic = monthlyBasic;
 	}
 	public void setPFRate(double pfRate){
-		Employee_Assignment.pfRate=pfRate;
+		Employee.pfRate=pfRate;
 	}
 	public double getPFRate(){
 		return pfRate;

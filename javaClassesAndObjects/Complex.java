@@ -34,12 +34,14 @@ public class Complex {
 		this.imaginary=imaginary;
 	}
 	
-	public void display(){
-		System.out.println("complex number : "+real+" + "+imaginary+" i");
+	public String display(){
+		if(this.imaginary<0) {
+			return "complex number : "+real+" - "+Math.abs(imaginary)+" i";
+		}else {
+			return "complex number : "+real+" + "+Math.abs(imaginary)+" i";
+		}		
 	}
-	public String show(){
-		return "complex number : "+real+" + "+imaginary+" i";
-	}
+	
 	public Complex sum(Complex number1,Complex number2){
 		
 		Complex complex=new Complex();

@@ -50,13 +50,5 @@ public class PersonTest {
 		
 	}
 
-	public static void main(String args[]){
-		
-		Person person1=new Person("Ram",5,6,1980);
-		Person person2=new Person("Shyam",2,3,1987);
-//		person1.getAge("05/06/1980");
-		
-		
-	}
 	
 }

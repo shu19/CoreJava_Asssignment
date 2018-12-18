@@ -27,18 +27,83 @@ public class ComplexTest {
 	}
 
 	@Test
-	public void test() {
+	public void testTwoPositiveComplexNumber() {
 		
-		Complex complex1=new Complex(2,5);
+		Complex complex1=new Complex(2,6);
+		System.out.println(complex1.display());
+		Complex complex2=new Complex(3,4);
+		System.out.println(complex2.display());
+		Complex complex3=new Complex();
+
+		complex3=complex3.sum(complex1,complex2);
+		System.out.println(complex3.display());
+		assertEquals("complex number : 5.0 + 10.0 i", complex3.display());
+			
+	}
+	
+
+	@Test
+	public void testOneNegativeImaginaryNumber() {
+		
+		Complex complex1=new Complex(2,6);
+		complex1.display();
+		Complex complex2=new Complex(3,-4);
+		complex2.display();
+		Complex complex3=new Complex();
+
+		complex3=complex3.sum(complex1,complex2);
+		System.out.println(complex3.display());
+		String expected ="complex number : 5.0 + 2.0 i";
+		assertEquals(expected, complex3.display());
+			
+	}
+
+	@Test
+	public void testOneNegativeRealNumber() {
+		
+		Complex complex1=new Complex(-2,6);
 		complex1.display();
 		Complex complex2=new Complex(3,4);
 		complex2.display();
 		Complex complex3=new Complex();
 
 		complex3=complex3.sum(complex1,complex2);
-		assertEquals("complex number : 5.0 + 9.0 i", complex3.show());
-		
-		
+		System.out.println(complex3.display());
+		String expected ="complex number : 1.0 + 10.0 i";
+		assertEquals(expected, complex3.display());
+			
 	}
+	
+	@Test
+	public void testTwoNegativeImaginaryNumbers() {
+		
+		Complex complex1=new Complex(2,-6);
+		complex1.display();
+		Complex complex2=new Complex(3,-4);
+		complex2.display();
+		Complex complex3=new Complex();
+
+		complex3=complex3.sum(complex1,complex2);
+		System.out.println(complex3.display());
+		String expected ="complex number : 5.0 - 10.0 i";
+		assertEquals(expected, complex3.display());
+			
+	}
+	@Test
+	public void testTwoNegativeRealNumbers() {
+		
+		Complex complex1=new Complex(-2,6);
+		complex1.display();
+		Complex complex2=new Complex(-3,4);
+		complex2.display();
+		Complex complex3=new Complex();
+
+		complex3=complex3.sum(complex1,complex2);
+		System.out.println(complex3.display());
+		String expected ="complex number : -5.0 + 10.0 i";
+		assertEquals(expected, complex3.display());
+			
+	}
+
 
 }

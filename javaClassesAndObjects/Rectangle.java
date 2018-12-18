@@ -10,6 +10,7 @@ package javaClassesAndObjects;
  * 
  * @author shuraut
  */
+
 public class Rectangle {
 	private int length;
 	private int breadth;

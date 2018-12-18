@@ -45,7 +45,7 @@ public class Date {
 		this.d=d;
 		this.m=m;
 		this.y=y;
-		//initialize d, m, y of the current object using the d, m, y parameters. 
+		//initializes d, m, y of the current object using the d, m, y parameters. 
 	}
 	public Date() {
 		// TODO Auto-generated constructor stub
@@ -53,7 +53,7 @@ public class Date {
 	public String toString()// method to get the value of a Date object printed
 	{
 		
-		//return the value of a Date object as a String in d/m/y format.
+		//returns the value of a Date object as a String in d/m/y format.
 		return d+"/"+m+"/"+y;
 	}
 	public boolean isSmaller(Date d)// method to check whether a date is smaller than the other 
@@ -100,17 +100,7 @@ public class Date {
 		LocalDate d1date = new java.sql.Date(sqlDateD1.getTime()).toLocalDate();
 		LocalDate d2Date = new java.sql.Date(sqlDateD2.getTime()).toLocalDate();
 		Period period = Period.between(d2Date, d1date);
-//
-////		System.out.println(period);
-//		if(period.getYears()<0){
-//			System.out.println(p1.name+" is older than "+p2.name+" by "+Math.abs(period.getYears()) +" Years, " +Math.abs(period.getMonths())+ " Months, " +Math.abs(period.getDays())+ " Days");
-//		
-//		}else{
-////			System.out.println(p2.name+" is older than "+p1.name+" by "+period.getYears() +"Years," +period.getMonths()+ "Months," +period.getDays()+ "Days");
-//			System.out.println(p2.name+" is older than "+p1.name+" by "+Math.abs(period.getYears()) +" Years, " +Math.abs(period.getMonths())+ " Months, " +Math.abs(period.getDays())+ " Days");
-//		}
-
-		
+	
 		//The difference of days, months and years in the invoking and parameter Date objects 
 		//is obtained and returned in an int array. The first element of the array should represent
 		//difference of days; second one, the difference of months and the third one, the difference of years.
