@@ -71,6 +71,9 @@ public class Date {
 		java.sql.Date sqlDateD1 = new java.sql.Date(utilDateD1.getTime());
 		java.sql.Date sqlDateD2 = new java.sql.Date(utilDateD2.getTime());
 		
+
+		LocalDate ld = LocalDate.parse("2017-11-10");
+
 		LocalDate d1date = new java.sql.Date(sqlDateD1.getTime()).toLocalDate();
 		LocalDate d2Date = new java.sql.Date(sqlDateD2.getTime()).toLocalDate();
 		Period period = Period.between(d2Date, d1date);
