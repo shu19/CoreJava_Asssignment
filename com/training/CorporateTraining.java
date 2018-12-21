@@ -13,5 +13,5 @@ public class CorporateTraining extends Training {
 		return days*getFees();
 	}
 
-	
+
 }
