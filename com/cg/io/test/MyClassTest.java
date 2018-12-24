@@ -30,24 +30,11 @@ public class MyClassTest {
 	@Test
 	public void test() {
 		MyClass myClass1 =new MyClass();
-
 		MyClass myClass2 =new MyClass();
 		MyClass myClass3 =new MyClass();
 		MyClass myClass4 =new MyClass();
 		MyClass myClass5 =new MyClass();
 
-		MyClass object[]={myClass1,myClass2,myClass3,myClass4,myClass5};
-		
-		for(MyClass myClass:object){
-			
-			
-		}
-	
-		String s;
-		for(int i=0;i<object.length;i++){
-			s=object[i].str;
-			System.out.println(s);
-		}
 		ArrayList<MyClass> arrayList=new ArrayList<>();
 		arrayList.add(myClass1);
 		arrayList.add(myClass2);
@@ -81,12 +68,7 @@ public class MyClassTest {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			 
-
 		}
-
-
-
 	}
 	
 	@Test
