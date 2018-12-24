@@ -1,14 +1,14 @@
 package com.collection.basic;
 
-public class Laptop {
 //Laptop : company, model, operatingSystem, processor
+//Company and model  together define the equality for Laptop. If two laptops have same company and model then they are equal.
 
-	//Company and model  together define the equality for Laptop. If two laptops have same company and model then they are equal.
+public class Laptop {
 	private String company;
 	private String model;
 	private String operatingSystem;
 	private String processor;
-	
+
 	/**
 	 * @param company
 	 * @param model
@@ -23,14 +23,14 @@ public class Laptop {
 		this.operatingSystem = operatingSystem;
 		this.processor = processor;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Laptop [company=" + company + ", model=" + model
 				+ ", operatingSystem=" + operatingSystem + ", processor="
 				+ processor + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -39,7 +39,7 @@ public class Laptop {
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -93,7 +93,5 @@ public class Laptop {
 	public void setProcessor(String processor) {
 		this.processor = processor;
 	}
-	
-	
-	
+
 }

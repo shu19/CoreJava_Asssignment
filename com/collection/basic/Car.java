@@ -1,16 +1,14 @@
 package com.collection.basic;
 
-public class Car implements Comparable<Car>{
-//Car : make, model, year, price
-	// make and model together define equality
-	
+// Car : make, model, year, price
+// make and model together define equality
+public class Car implements Comparable<Car> {
+
 	private String make;
 	private String model;
 	private String year;
 	private int price;
 
-
-	
 	/**
 	 * @param make
 	 * @param model
@@ -33,7 +31,7 @@ public class Car implements Comparable<Car>{
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -55,35 +53,32 @@ public class Car implements Comparable<Car>{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Car [make=" + make + ", model=" + model + ", year=" + year
 				+ ", price=" + price + "]";
 	}
-	
+
 	public String getMake() {
 		return make;
 	}
-	
+
 	public void setMake(String make) {
 		this.make = make;
 	}
-	
+
 	public String getModel() {
 		return model;
 	}
-	
+
 	public void setModel(String model) {
 		this.model = model;
 	}
 
 	@Override
 	public int compareTo(Car car) {
-		
 		return make.compareTo(car.make);
 	}
-	
-	
-	
+
 }

@@ -133,12 +133,12 @@ public class BasicCollectionTest {
 
 	@Test
 	public void testStudentArrayList() {
-		ArrayList<Student> studentsArrayList=new ArrayList<Student>();
-		studentsArrayList.add( new Student("Rohan","Banana"));
-		studentsArrayList.add(new Student("Tushar","Mango"));
-		studentsArrayList.add( new Student("Shubham","Apple"));
+		ArrayList<Student> studentsArrayList = new ArrayList<Student>();
+		studentsArrayList.add(new Student("Rohan", "Banana"));
+		studentsArrayList.add(new Student("Tushar", "Mango"));
+		studentsArrayList.add(new Student("Shubham", "Apple"));
 
-		String expected="[Student [name=Rohan, favoriteFruits=Banana], Student [name=Tushar, favoriteFruits=Mango], Student [name=Shubham, favoriteFruits=Apple]]";
+		String expected = "[Student [name=Rohan, favoriteFruits=Banana], Student [name=Tushar, favoriteFruits=Mango], Student [name=Shubham, favoriteFruits=Apple]]";
 		assertEquals(expected, studentsArrayList.toString());
 	}
 
@@ -150,12 +150,12 @@ public class BasicCollectionTest {
 
 	@Test
 	public void testStudentTreeSet() {
-		TreeSet<Student> studentsTreeSet=new TreeSet<Student>();
-		studentsTreeSet.add( new Student("Rohan","Banana"));
-		studentsTreeSet.add(new Student("Tushar","Mango"));
-		studentsTreeSet.add( new Student("Shubham","Apple"));
-		
-		String expected="[Student [name=Rohan, favoriteFruits=Banana], Student [name=Shubham, favoriteFruits=Apple], Student [name=Tushar, favoriteFruits=Mango]]";
+		TreeSet<Student> studentsTreeSet = new TreeSet<Student>();
+		studentsTreeSet.add(new Student("Rohan", "Banana"));
+		studentsTreeSet.add(new Student("Tushar", "Mango"));
+		studentsTreeSet.add(new Student("Shubham", "Apple"));
+
+		String expected = "[Student [name=Rohan, favoriteFruits=Banana], Student [name=Shubham, favoriteFruits=Apple], Student [name=Tushar, favoriteFruits=Mango]]";
 		assertEquals(expected, studentsTreeSet.toString());
 	}
 
@@ -193,29 +193,29 @@ public class BasicCollectionTest {
 	@Test
 	public void testStudentMap() {
 
-		Map<String,Student> studentMap=new HashMap<>();
-		studentMap.put("Shubham", new Student("Shubham","Apple"));
-		studentMap.put("Rohan", new Student("Rohan","Banana"));
-		studentMap.put("Tushar", new Student("Tushar","Mango"));
-		studentMap.put("Tejas", new Student("Tejas","Pineapple"));
-		
-		String expected="{Tejas=Student [name=Tejas, favoriteFruits=Pineapple], Tushar=Student [name=Tushar, favoriteFruits=Mango], Shubham=Student [name=Shubham, favoriteFruits=Apple], Rohan=Student [name=Rohan, favoriteFruits=Banana]}";
+		Map<String, Student> studentMap = new HashMap<>();
+		studentMap.put("Shubham", new Student("Shubham", "Apple"));
+		studentMap.put("Rohan", new Student("Rohan", "Banana"));
+		studentMap.put("Tushar", new Student("Tushar", "Mango"));
+		studentMap.put("Tejas", new Student("Tejas", "Pineapple"));
+
+		String expected = "{Tejas=Student [name=Tejas, favoriteFruits=Pineapple], Tushar=Student [name=Tushar, favoriteFruits=Mango], Shubham=Student [name=Shubham, favoriteFruits=Apple], Rohan=Student [name=Rohan, favoriteFruits=Banana]}";
 		assertEquals(expected, studentMap.toString());
-		
+
 	}
 
 	@Test
 	public void testStudentMapGetFavoriteFruitByGivingName() {
 
-		Map<String,Student> studentMap=new HashMap<>();
-		studentMap.put("Shubham", new Student("Shubham","Apple"));
-		studentMap.put("Rohan", new Student("Rohan","Banana"));
-		studentMap.put("Tushar", new Student("Tushar","Mango"));
-		studentMap.put("Tejas", new Student("Tejas","Pineapple"));
-		
-		String expected="Student [name=Rohan, favoriteFruits=Banana]";
+		Map<String, Student> studentMap = new HashMap<>();
+		studentMap.put("Shubham", new Student("Shubham", "Apple"));
+		studentMap.put("Rohan", new Student("Rohan", "Banana"));
+		studentMap.put("Tushar", new Student("Tushar", "Mango"));
+		studentMap.put("Tejas", new Student("Tejas", "Pineapple"));
+
+		String expected = "Student [name=Rohan, favoriteFruits=Banana]";
 		assertEquals(expected, studentMap.get("Rohan").toString());
-		
+
 	}
-	
+
 }

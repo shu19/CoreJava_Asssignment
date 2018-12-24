@@ -6,16 +6,15 @@ package com.collection.basic;
  * @author shuraut
  *
  */
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student> {
 
 	private String name;
 	private String favoriteFruits;
-	
 
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	/**
 	 * @param name
 	 * @param favoriteFruits
@@ -84,6 +83,5 @@ public class Student implements Comparable<Student>{
 	public int compareTo(Student student) {
 		return name.compareTo(student.name);
 	}
-	
-	
+
 }

@@ -1,14 +1,13 @@
 package com.collection.basic;
 
+// Television : company, type (LCD, LED, Plasma), 3D enabled, price
+// company, type (LCD, LED, Plasma) and price together define equality
 public class Television {
-	//Television : company, type (LCD, LED, Plasma), 3D enabled, price
-//company, type (LCD, LED, Plasma) and price together define equality
-	
+
 	private String company;
-	private String type; //LCD, LED, Plasma
+	private String type; // LCD, LED, Plasma
 	private int price;
 	private boolean is3Denabled;
-
 
 	/**
 	 * @param company
@@ -24,6 +23,7 @@ public class Television {
 		this.price = price;
 		this.is3Denabled = is3Denabled;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -33,6 +33,7 @@ public class Television {
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -56,34 +57,41 @@ public class Television {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Television [company=" + company + ", type=" + type + ", price="
 				+ price + ", is3Denabled=" + is3Denabled + "]";
 	}
+
 	public String getCompany() {
 		return company;
 	}
+
 	public void setCompany(String company) {
 		this.company = company;
 	}
+
 	public String getType() {
 		return type;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
+
 	public int getPrice() {
 		return price;
 	}
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
 
 	public boolean isIs3Denabled() {
 		return is3Denabled;
 	}
+
 	public void setIs3Denabled(boolean is3Denabled) {
 		this.is3Denabled = is3Denabled;
 	}

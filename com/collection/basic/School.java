@@ -1,18 +1,14 @@
 package com.collection.basic;
 
-public class School {
+//
 //name, city and school district together define equality
-	//School : name, city, school district, greatSchoolRanking
+//School : name, city, school district, greatSchoolRanking
+public class School {
 	private String name;
 	private String city;
 	private String District;
 	private int greatSchoolRanking;
-	
-	
-	
-	
-	
-	
+
 	/**
 	 * @param name
 	 * @param city
@@ -28,9 +24,6 @@ public class School {
 		this.greatSchoolRanking = greatSchoolRanking;
 	}
 
-
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -41,9 +34,6 @@ public class School {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -72,50 +62,42 @@ public class School {
 		return true;
 	}
 
-
-
-
 	@Override
 	public String toString() {
 		return "School [name=" + name + ", city=" + city + ", District="
 				+ District + ", greatSchoolRanking=" + greatSchoolRanking + "]";
 	}
 
-
-
-
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getCity() {
 		return city;
 	}
+
 	public void setCity(String city) {
 		this.city = city;
 	}
+
 	public String getDistrict() {
 		return District;
 	}
+
 	public void setDistrict(String district) {
 		District = district;
 	}
-
-
-
 
 	public int getGreatSchoolRanking() {
 		return greatSchoolRanking;
 	}
 
-
-
-
 	public void setGreatSchoolRanking(int greatSchoolRanking) {
 		this.greatSchoolRanking = greatSchoolRanking;
 	}
-	
-	
+
 }
