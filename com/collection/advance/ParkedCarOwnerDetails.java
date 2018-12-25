@@ -26,6 +26,34 @@ public class ParkedCarOwnerDetails implements Comparable<ParkedCarOwnerDetails>{
 	private String owerMobileNumber;
 	private String owerAddress;
 
+	private final int floor;
+	private final int section;
+	private final int locationInSection;
+	private final int token;
+
+	
+	public static int highestToken=1101; 
+	
+	{
+		if(highestToken%100==21){
+			highestToken+=80;
+			token=highestToken++;
+		}else if(highestToken%1000==420){
+			highestToken+=681;
+			token=highestToken++;
+			
+		}else{
+			token=highestToken++;	
+		}
+		
+		floor=token/1000;
+		
+		section=(token/100)%10;
+		locationInSection=token%100;	
+		
+	}
+
+	
 	/**
 	 * 
 	 * @param ownerName
@@ -52,12 +80,42 @@ public class ParkedCarOwnerDetails implements Comparable<ParkedCarOwnerDetails>{
 		this.ownerName = ownerName;
 	}
 
-	public String getOwerMobileNo() {
+
+
+	public String getOwerMobileNumber() {
 		return owerMobileNumber;
 	}
 
-	public void setOwerMobileNo(String owerMobileNo) {
-		this.owerMobileNumber = owerMobileNo;
+	public void setOwerMobileNumber(String owerMobileNumber) {
+		this.owerMobileNumber = owerMobileNumber;
+	}
+
+	public static int getHighestToken() {
+		return highestToken;
+	}
+
+	public static void setHighestToken(int highestToken) {
+		ParkedCarOwnerDetails.highestToken = highestToken;
+	}
+
+	public String getCarNumber() {
+		return carNumber;
+	}
+
+	public int getFloor() {
+		return floor;
+	}
+
+	public int getSection() {
+		return section;
+	}
+
+	public int getLocationInSection() {
+		return locationInSection;
+	}
+
+	public int getToken() {
+		return token;
 	}
 
 	public String getOwerAddress() {
@@ -72,9 +130,6 @@ public class ParkedCarOwnerDetails implements Comparable<ParkedCarOwnerDetails>{
 		return carModel;
 	}
 
-	public String getCarNo() {
-		return carNumber;
-	}
 
 	@Override
 	public int compareTo(ParkedCarOwnerDetails o) {		

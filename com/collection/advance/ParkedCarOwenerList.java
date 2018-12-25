@@ -1,6 +1,7 @@
 package com.collection.advance;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * b. Create class Parked_CarOwenerList which will have method’s int
@@ -19,28 +20,29 @@ public class ParkedCarOwenerList {
 	int section=4;
 	int noOfCarInEachSection=20;
 	
-	ArrayList<ParkedCarOwnerDetails> parkedCarOwnerDetailsArrayList;
+//	ArrayList<ParkedCarOwnerDetails> parkedCarOwnerDetailsArrayList;
+	HashMap<Integer, ParkedCarOwnerDetails> hashMap;
 	
 	public ParkedCarOwenerList() {
-		parkedCarOwnerDetailsArrayList=new ArrayList<ParkedCarOwnerDetails>();
+//		parkedCarOwnerDetailsArrayList=new ArrayList<ParkedCarOwnerDetails>();
+		hashMap=new HashMap<Integer, ParkedCarOwnerDetails>();
 	}
 	
 	public int addNewCar(ParkedCarOwnerDetails obj){
-		
-		parkedCarOwnerDetailsArrayList.add(obj);
-		
-		return 0;
+		hashMap.put(obj.getToken(), obj);
+		return obj.getToken();
 	}
 	
 	public void removeCar(int token){
-		
-		
+		hashMap.remove(token);	
 		
 	}
 	
-	public int getParkedCarLocation(int token){
-		
-		return token;
-		
+	public String getParkedCarLocation(int token){
+		String location="Your car is parked on Floor "+hashMap.get(token).getFloor()+" Section "
+				+ hashMap.get(token).getSection()+" Slot "
+						+ hashMap.get(token).getLocationInSection();
+	
+		return location;		
 	}
 }
