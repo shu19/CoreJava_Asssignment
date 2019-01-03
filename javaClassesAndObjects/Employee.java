@@ -68,11 +68,11 @@ public class Employee {
 	}
 	
 	public double getMonthlyGrossSalary(){
-		double HRA=getMonthlyBasic()*50/100;
+		final double hra=getMonthlyBasic()*50/100;
 		double medicalAllowance=1250;
 		double conveyanceAllowance=800;
 		
-		return getMonthlyBasic()+HRA+medicalAllowance+conveyanceAllowance;
+		return getMonthlyBasic()+hra+medicalAllowance+conveyanceAllowance;
 	}
 	
 	public double getAnnualGrossSalary(){
@@ -80,10 +80,10 @@ public class Employee {
 	}
 
 	public double getMonthlyDeductions(){
-		double PF=(getMonthlyBasic()*getPFRate()/100)<=6500 ? getMonthlyBasic()*getPFRate()/100:6500;
-		double ESIC= getMonthlyBasic()<=5000 ? (getMonthlyBasic()*4.75/100):0;
+		double pf=(getMonthlyBasic()*getPFRate()/100)<=6500 ? getMonthlyBasic()*getPFRate()/100:6500;
+		double esic= getMonthlyBasic()<=5000 ? (getMonthlyBasic()*4.75/100):0;
 		double professionalTax= getMonthlyGrossSalary()<=10000 ?50:100;
-		return PF+ESIC+professionalTax;
+		return pf+esic+professionalTax;
 	}
 
 	public double getMonthlyTakeHome(){

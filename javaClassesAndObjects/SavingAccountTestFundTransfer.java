@@ -15,9 +15,9 @@ public class SavingAccountTestFundTransfer {
 	public void testFundTransferAmountLessThanBalance() {
 		SavingAccount shubham=new SavingAccount("Shubham", 5000);		
 		
-		SavingAccount Rohan=new SavingAccount("Shubham", 6000);
+		SavingAccount rohan=new SavingAccount("Shubham", 6000);
 		
-		PaymentGateway.transfer(shubham, Rohan, 2000);
+		PaymentGateway.transfer(shubham, rohan, 2000);
 		
 		assertEquals(3000, shubham.getBalance(),2);
 	}
@@ -26,9 +26,9 @@ public class SavingAccountTestFundTransfer {
 	public void testFundTransferAmountDebitedFromSender() {
 		SavingAccount shubham=new SavingAccount("Shubham", 5000);		
 		
-		SavingAccount Rohan=new SavingAccount("Shubham", 6000);
+		SavingAccount rohan=new SavingAccount("Shubham", 6000);
 		
-		PaymentGateway.transfer(shubham, Rohan, 2000);
+		PaymentGateway.transfer(shubham, rohan, 2000);
 		
 		assertEquals(3000, shubham.getBalance(),2);
 	}
@@ -49,9 +49,9 @@ public class SavingAccountTestFundTransfer {
 	public void testFundTransferAmountGreaterThanBalance() {
 		SavingAccount shubham=new SavingAccount("Shubham", 5000);		
 		
-		SavingAccount Rohan=new SavingAccount("Shubham", 6000);
+		SavingAccount rohan=new SavingAccount("Shubham", 6000);
 		
-		PaymentGateway.transfer(shubham, Rohan, 9000);
+		PaymentGateway.transfer(shubham, rohan, 9000);
 		
 		assertEquals(5000, shubham.getBalance(),2);
 		

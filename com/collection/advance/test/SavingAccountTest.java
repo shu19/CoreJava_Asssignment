@@ -125,8 +125,7 @@ public class SavingAccountTest {
 				FileReader fr = new FileReader(file);
 				FileInputStream is = new FileInputStream(file);
 				ObjectInputStream ois = new ObjectInputStream(is);
-				ArrayList<SavingAccount> emp = (ArrayList<SavingAccount>) ois
-						.readObject();
+				ArrayList<SavingAccount> emp = (ArrayList<SavingAccount>) ois.readObject();
 				ois.close();
 				is.close();
 				System.out.println(emp.toString());

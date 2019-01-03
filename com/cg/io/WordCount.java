@@ -25,6 +25,7 @@ public class WordCount {
 				count++;
 			}		
 		}
+		sc.close();
 		return count;
 	}
 

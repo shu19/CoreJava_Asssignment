@@ -1,13 +1,15 @@
 package com.collection.basic;
 
-//
-//name, city and school district together define equality
-//School : name, city, school district, greatSchoolRanking
+/**
+ * 
+ * @author shuraut
+ *
+ */
 public class School {
-	private String name;
-	private String city;
-	private String District;
-	private int greatSchoolRanking;
+	private String name; // This variable stores school name
+	private String city; // This variable stores city 
+	private String district; // This variable stores district
+	private int greatSchoolRanking; //This variable stores School Ranking
 
 	/**
 	 * @param name
@@ -20,21 +22,21 @@ public class School {
 		super();
 		this.name = name;
 		this.city = city;
-		District = district;
+		this.district = district;
 		this.greatSchoolRanking = greatSchoolRanking;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((District == null) ? 0 : District.hashCode());
+				+ ((district == null) ? 0 : district.hashCode());
 		result = prime * result + ((city == null) ? 0 : city.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
 
+	//	name, city and schoolDistrict together define equality
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -44,10 +46,10 @@ public class School {
 		if (getClass() != obj.getClass())
 			return false;
 		School other = (School) obj;
-		if (District == null) {
-			if (other.District != null)
+		if (district == null) {
+			if (other.district != null)
 				return false;
-		} else if (!District.equals(other.District))
+		} else if (!district.equals(other.district))
 			return false;
 		if (city == null) {
 			if (other.city != null)
@@ -65,7 +67,7 @@ public class School {
 	@Override
 	public String toString() {
 		return "School [name=" + name + ", city=" + city + ", District="
-				+ District + ", greatSchoolRanking=" + greatSchoolRanking + "]";
+				+ district + ", greatSchoolRanking=" + greatSchoolRanking + "]";
 	}
 
 	public String getName() {
@@ -85,11 +87,11 @@ public class School {
 	}
 
 	public String getDistrict() {
-		return District;
+		return district;
 	}
 
 	public void setDistrict(String district) {
-		District = district;
+		this.district = district;
 	}
 
 	public int getGreatSchoolRanking() {

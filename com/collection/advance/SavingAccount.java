@@ -67,6 +67,10 @@ public class SavingAccount implements Serializable,Comparable<SavingAccount> {
 		return isSalaryAccount;
 	}
 	
+	/**
+	 * @param amount
+	 * @throws Exception
+	 */
 	public void withdraw(double amount) throws Exception{
 		if(amount>0 && amount<this.getAccountBalance()){
 			this.accountBalance-=amount;	
@@ -75,6 +79,10 @@ public class SavingAccount implements Serializable,Comparable<SavingAccount> {
 		}
 	}
 
+	/**
+	 * @param amount
+	 * @throws Exception
+	 */
 	public void deposit(double amount) throws Exception{
 		if(amount>0 ){
 			this.accountBalance+=amount;	

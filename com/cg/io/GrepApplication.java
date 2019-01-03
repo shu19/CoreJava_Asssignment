@@ -18,7 +18,7 @@ public class GrepApplication {
 		File file = new File(path);
 		if (file.exists()) {
 
-			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+			final BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 			String line = bufferedReader.readLine();
 
 			int count = 1;
@@ -29,6 +29,7 @@ public class GrepApplication {
 				line = bufferedReader.readLine();
 				count++;
 			}
+			bufferedReader.close();
 
 		}else{
 			throw new FileNotFoundException();

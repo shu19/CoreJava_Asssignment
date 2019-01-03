@@ -46,7 +46,7 @@ public class Vehicle {
 	}
 
 	public Vehicle(String ownerName) {
-		this.setOwnerName(ownerName);
+		this.ownerName=ownerName;
 		vehicleIdentificationNumber=highestIdentificationNumber++;
 	}
 

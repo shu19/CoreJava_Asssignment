@@ -52,48 +52,53 @@ public class StudentsMarks {
 
 }
 
+/**
+ * @author shuraut
+ *
+ *	This class stores the information about student
+ */
 class Student {
-	private int SubjectA;
-	private int SubjectB;
-	private int SubjectC;
+	private int subjectA;
+	private int subjectB;
+	private int subjectC;
 
 	public Student(int subjectA, int subjectB, int subjectC) {
 
-		SubjectA = subjectA;
-		SubjectB = subjectB;
-		SubjectC = subjectC;
+		this.subjectA = subjectA;
+		this.subjectB = subjectB;
+		this.subjectC = subjectC;
 	}
 
 	public int getSubjectA() {
-		return SubjectA;
+		return subjectA;
 	}
 
 	public void setSubjectA(int subjectA) {
-		SubjectA = subjectA;
+		this.subjectA = subjectA;
 	}
 
 	public int getSubjectB() {
-		return SubjectB;
+		return subjectB;
 	}
 
 	public void setSubjectB(int subjectB) {
-		SubjectB = subjectB;
+		this.subjectB = subjectB;
 	}
 
 	public int getSubjectC() {
-		return SubjectC;
+		return subjectC;
 	}
 
 	public void setSubjectC(int subjectC) {
-		SubjectC = subjectC;
+		this.subjectC = subjectC;
 	}
 
 	public int getTotalMarks() {
-		return SubjectA + SubjectB + SubjectC;
+		return subjectA + subjectB + subjectC;
 	}
 
 	public double getAverageMarks() {
-		return (SubjectA + SubjectB + SubjectC) / 3;
+		return (subjectA + subjectB + subjectC) / 3;
 	}
 
 }

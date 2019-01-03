@@ -14,9 +14,9 @@ public class VehicleTestChangeSpeed {
 	@Test
 	public void testPositiveSpeed() {
 		
-		Vehicle Baleno=new Vehicle("Shubham");
-		Baleno.changeSpeed(50);
-		assertEquals(50, Baleno.getCurrentSpeed());
+		final Vehicle baleno=new Vehicle("Shubham");
+		baleno.changeSpeed(50);
+		assertEquals(50, baleno.getCurrentSpeed());
 			
 	}
 
@@ -24,9 +24,9 @@ public class VehicleTestChangeSpeed {
 	@Test
 	public void testNegativeSpeed() {
 		
-		Vehicle Baleno=new Vehicle("Shubham");
-		Baleno.changeSpeed(-50);
-		assertEquals(0, Baleno.getCurrentSpeed());
+		final Vehicle baleno=new Vehicle("Shubham");
+		baleno.changeSpeed(-50);
+		assertEquals(0, baleno.getCurrentSpeed());
 			
 	}
 }

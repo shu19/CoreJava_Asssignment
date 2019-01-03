@@ -2,29 +2,22 @@ package com.collection.advance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * b. Create class Parked_CarOwenerList which will have method’s int
  * add_new_car(Parked_CarOwner_Details obj), remove_car(),
  * get_parked_car_location(token)
  * 
- * 
  * @author shuraut
  *
  */
 
 public class ParkedCarOwenerList {
-
 	
-	int floor=3;
-	int section=4;
-	int noOfCarInEachSection=20;
-	
-//	ArrayList<ParkedCarOwnerDetails> parkedCarOwnerDetailsArrayList;
 	HashMap<Integer, ParkedCarOwnerDetails> hashMap;
 	
 	public ParkedCarOwenerList() {
-//		parkedCarOwnerDetailsArrayList=new ArrayList<ParkedCarOwnerDetails>();
 		hashMap=new HashMap<Integer, ParkedCarOwnerDetails>();
 	}
 	
@@ -35,7 +28,6 @@ public class ParkedCarOwenerList {
 	
 	public void removeCar(int token){
 		hashMap.remove(token);	
-		
 	}
 	
 	public String getParkedCarLocation(int token){
